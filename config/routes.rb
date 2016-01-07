@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#index'
+  resources :checks
   resources :users, only: [:new, :create]
 
   resources :user_sessions, only: [:create, :destroy]
